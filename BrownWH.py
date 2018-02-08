@@ -1,6 +1,7 @@
 import nltk
 # nltk.download('brown')
 from nltk.corpus import brown
+
 print('categories are : ')
 print(brown.categories())
 
@@ -10,9 +11,9 @@ whwords = ['what', 'who', 'where', 'which', 'how', 'why', 'when', 'when']
 
 
 for whword in range(0, len(genres)):
-    genre=genres[whword]
+    genre = genres[whword]
     print()
-    print("analysing '" + genre +"' whwords")
+    print("analysing '" + genre + "' whwords")
     genre_text = brown.words(categories=genre)
     fdist = nltk.FreqDist(genre_text)
     for wh in whwords:

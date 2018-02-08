@@ -1,6 +1,5 @@
 from nltk.corpus import reuters
 
-
 files = reuters.fileids()
 print(files)
 
@@ -17,8 +16,7 @@ reutersGenres = reuters.categories()
 print()
 print(reutersGenres)
 
-for word in reuters.words(categories=['bop','cocoa']):
-    print(word + ' ', end = '')
-    if(word is '.'):
+for word in reuters.words(categories=['bop', 'cocoa']):
+    print(word + ' ', end='')
+    if word is '.':
         print()
-
